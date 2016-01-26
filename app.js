@@ -8,10 +8,8 @@ mongoose.connect('mongodb://localhost/news');
 require('./models/Posts');
 
 var Post = mongoose.model('Post');
-
+var routes = require('./routes/index');
 var app = express();
-
-// app.use(require('connect-livereload')());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
